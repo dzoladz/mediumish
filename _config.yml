@@ -1,0 +1,89 @@
+# -----------------------------------------------------------
+# Site
+# -----------------------------------------------------------
+name: "wtf"
+title: "wtf"
+description: ""
+logo: 'assets/images/logo.png'
+favicon: 'assets/images/logo.png'
+baseurl:
+google_analytics: ''
+disqus: ''
+mailchimp-list: ''
+mailchimp-list-enable: False
+include: ["_pages"]
+permalink: /:title/
+
+# -----------------------------------------------------------
+# Authors
+# -----------------------------------------------------------
+authors:
+  derek:
+    name: Derek Zoladz
+    display_name: Derek Zoladz
+    gravatar: da0389a1a0c306c893c072cbc7253a46  # md5 hash of email address
+    email: derek@derekzoladz.com
+    web: https://www.derekzoladz.com
+    twitter:
+    description: "Focusing on cultural heritage institutions: discovery applications, data (and metadata) wrangling, web development, process automation, and system integration."
+  # derek2:
+    # name:
+    # display_name:
+    # avatar:
+    # gravatar:
+    # email:
+    # web:
+    # twitter:
+    # description: ""
+
+# -----------------------------------------------------------
+# Plugins
+# -----------------------------------------------------------
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+
+# -----------------------------------------------------------
+# Archives
+# -----------------------------------------------------------
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
+
+# -----------------------------------------------------------
+# Pagination
+# -----------------------------------------------------------
+paginate: 6
+paginate_path: /page:num/
+
+# -----------------------------------------------------------
+# Markdown
+# -----------------------------------------------------------
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+# -----------------------------------------------------------
+# Adsense
+# -----------------------------------------------------------
+adsense: "disabled"
+adsense-data-ad-client: ""
+adsense-data-ad-slot: ""
+
+# -----------------------------------------------------------
+# Lazy Images
+# -----------------------------------------------------------
+lazyimages: True
+
+exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
